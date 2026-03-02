@@ -6,25 +6,26 @@
     <title>Countdown Spring Meetup</title>
     <style>
         body {
-            background: linear-gradient(135deg, #a8e063, #f6d365);
+            /* Din nya gradient baserad på dina färger */
+            background: linear-gradient(180deg, #F2B3FF 0%, #FFE9E8 50%, #FFD2D1 100%);
             font-family: 'Segoe UI', sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
-            color: white;
+            color: #555; /* Mjukare textfärg för att passa pastellerna */
             text-align: center;
         }
         .container {
-            background: rgba(255, 255, 255, 0.2);
-            padding: 40px;
-            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.4);
+            padding: 50px;
+            border-radius: 30px;
             backdrop-filter: blur(10px);
-            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
         }
-        h1 { font-size: 2.5rem; margin-bottom: 20px; }
-        #timer { font-size: 4rem; font-weight: bold; }
+        h1 { font-size: 2.5rem; margin-bottom: 20px; color: #333; }
+        #timer { font-size: 5rem; font-weight: bold; color: #333; }
     </style>
 </head>
 <body>
@@ -35,7 +36,7 @@
 </div>
 
 <script>
-    // Sätt datumet till fredag 6 mars 2026 kl 13:00
+    // Nedräkning till fredag 6 mars 2026 kl 13:00
     const countDownDate = new Date("Mar 6, 2026 13:00:00").getTime();
 
     const x = setInterval(function() {
