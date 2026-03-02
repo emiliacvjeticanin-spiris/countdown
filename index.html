@@ -1,15 +1,14 @@
-
 <!DOCTYPE html>
 <html lang="sv">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Countdown Spring Meetup</title>
+    <title>Countdown Spiris Spring Meetup</title>
     <style>
         body {
-            /* Din nya gradient baserad på dina färger */
+            /* Din gradient baserad på dina färger */
             background: transparent;
-            font-family: 'inter', sans-serif;
+            font-family: 'Inter', sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -17,22 +16,38 @@
             margin: 0;
             color: #555; /* Mjukare textfärg för att passa pastellerna */
             text-align: center;
+            overflow: hidden; /* Förhindrar rullningslister om fönstret blir litet */
         }
         .container {
             background: rgba(255, 255, 255, 0.4);
-            padding: 50px;
+            padding: 5vw; /* Responsiv padding */
             border-radius: 30px;
             backdrop-filter: blur(10px);
             box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            max-width: 90%; /* Förhindrar att containern blir för bred */
         }
-        h1 { font-size: 2.5rem; margin-bottom: 20px; color: #333; }
-        #timer { font-size: 5rem; font-weight: bold; color: #333; }
+        h1 { 
+            /* Responsiv rubrikstorlek */
+            font-size: 3vw; 
+            margin-bottom: 20px; 
+            color: #333; 
+        }
+        #timer { 
+            /* Responsiv storlek på nedräkningen */
+            font-size: 8vw; 
+            font-weight: bold; 
+            color: #333; 
+        }
+        /* Media query för ännu mindre skärmar (t.ex. mobiler) */
+        @media (max-width: 600px) {
+            h1 { font-size: 6vw; }
+            #timer { font-size: 12vw; }
+        }
     </style>
 </head>
 <body>
 
 <div class="container">
-
     <div id="timer">Laddar...</div>
 </div>
 
