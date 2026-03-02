@@ -6,14 +6,11 @@
     <style>
         body {
             background: transparent;
-            font-family: 'inter', sans-serif;
+            font-family: sans-serif;
+            margin-top: 200px;
             display: flex;
             justify-content: center;
-            align-items: center;
-            margin-top: 200px;
-            color: #333;
         }
-        /* Här sätter vi en fast storlek på containern */
         .container {
             background: rgba(255, 255, 255, 0.5);
             padding: 40px;
@@ -21,26 +18,18 @@
             backdrop-filter: blur(10px);
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
             text-align: center;
-            width: 300px; /* Fast bredd */
+            width: 300px;
         }
-
-        #timer { font-size: 40px; font-weight: bold; }
-        
-
+        #timer { font-size: 40px; font-weight: bold; color: #333; }
     </style>
 </head>
 <body>
 
-<div class="container" id="mainContainer">
-
+<div class="container">
     <div id="timer">Laddar...</div>
 </div>
 
-
-
 <script>
-
-
     const countDownDate = new Date("Mar 6, 2026 13:00:00").getTime();
 
     const x = setInterval(function() {
