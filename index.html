@@ -4,29 +4,52 @@
     <meta charset="UTF-8">
     <title>Countdown Spiris Spring Meetup</title>
     <style>
-        body {
-            background: transparent;
-            font-family: sans-serif;
-            margin-top: 300px;
+        /* Grundinställning för att låsa hela sidan */
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden; /* Förhindrar scrollbar */
             display: flex;
             justify-content: center;
+            align-items: center;
+            background: linear-gradient(180deg, #F2B3FF 0%, #FFE9E8 50%, #FFD2D1 100%);
+            font-family: sans-serif;
         }
+
+        /* Detta är din "canvas" på exakt 1920x1080 */
+        .canvas {
+            width: 1920px;
+            height: 1080px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* Detta skalar ner canvasen om fönstret är mindre än 1920x1080 */
+            transform-origin: center center;
+            transform: scale(0.5); /* Justera detta värde för att zooma in/ut manuellt */
+        }
+
         .container {
             background: rgba(255, 255, 255, 0.5);
-            padding: 40px;
-            border-radius: 30px;
+            padding: 60px;
+            border-radius: 40px;
             backdrop-filter: blur(10px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.1);
             text-align: center;
-            width: 300px;
+            width: 700px; /* Fast bredd inuti canvasen */
         }
-        #timer { font-size: 40px; font-weight: bold; color: #333; }
+
+        h1 { font-size: 50px; color: #333; margin-bottom: 20px; }
+        #timer { font-size: 100px; font-weight: bold; color: #333; }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <div id="timer">Laddar...</div>
+<div class="canvas">
+    <div class="container">
+        <div id="timer">Laddar...</div>
+    </div>
 </div>
 
 <script>
